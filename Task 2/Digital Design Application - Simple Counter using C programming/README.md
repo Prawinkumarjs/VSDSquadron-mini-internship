@@ -1,6 +1,3 @@
-You can use the following README.md content tailored to your repository URL:
-
-
 # RISC-V Simple Counter Program
 
 This repository contains a simple RISC-V counter program written in C. Follow the instructions below to set up, build, and run the program using the RISC-V toolchain, Spike simulator, and proxy kernel (pk).
