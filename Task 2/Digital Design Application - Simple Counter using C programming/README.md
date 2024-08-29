@@ -89,6 +89,8 @@ int main() {
     return 0;
 }
 ```
+![1](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/1.png)
+
 Save and close Leafpad.
 
 ### 5. Compile the Program
@@ -98,6 +100,7 @@ Compile and link the source code into an executable:
 ```sh
     riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o simplecounter simplecounter.c
 ```
+![3](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/3.png)
 
 ### 6. View the Object File (Optional)
 
@@ -106,13 +109,13 @@ If you need to view the object file, first compile to object file:
 ```sh
     riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -c simplecounter.c -o simplecounter.o
 ```
-
+![3](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/3.png)
 To view the object file, use:
 
  ```sh
     riscv64-unknown-elf-objdump -d simplecounter.o
 ```
-
+![4](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/4.png)
 ### 7. Run the Program
 
 To execute the compiled program with Spike and pk, use:
@@ -120,6 +123,7 @@ To execute the compiled program with Spike and pk, use:
  ```sh
     spike pk simplecounter
 ```
+![5](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/5.png)
 
 ### 8. Debug the Program (Optional)
 
@@ -128,6 +132,7 @@ For detailed debugging output, run:
 ```sh
     spike -d pk simplecounter
 ```
+![6](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/6.png)
 
 ### 9. View the File Content (Optional)
 
@@ -140,6 +145,7 @@ To view the content of the source file or object file, use `cat`:
 ```sh
     cat simplecounter.o
 ```
+![2](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/2.png)
 
 ### Example Output
 When running the program, you should see:
@@ -159,6 +165,7 @@ Counter: 9
 Counter: 10
 Counter reached the end value of 10. Stopping.
 ```
+![Example](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/Digital%20Design%20Application%20-%20Simple%20Counter%20using%20C%20programming/1.png)
 
  ### Troubleshooting
 
