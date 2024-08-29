@@ -117,90 +117,53 @@ Save the file in the editor
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary>
- <h3>Task 2:</h3>
-<h2>RISC-V Simple Counter Program</h2>
- <br>
-</summary>
+<summary><b>
+ <h3>Task2:</h3>
+</b> <h2>Performing SPIKE Simulation and Debugging a simple C code with Interactive Debugging Mode using Spike</h2></summary> 
+  
+### What is SPIKE in RISCV?
+> * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
+> * Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target.  
+  
+### What is pk (Proxy Kernel)?  
+> * The RISC-V Proxy Kernel, pk , is a lightweight application execution environment that can host statically-linked RISC-V ELF binaries.  
+> * A Proxy Kernel in the RISC-V ecosystem simplifies the interaction between complex hardware and the software running on it, making it easier to manage, test, and develop software and hardware projects.  
+ 
 
-This repository contains a simple RISC-V counter program written in `C`. It demonstrates basic RISC-V program execution and interaction with the `spike` simulator and `pk` (proxy kernel).
-
-## Prerequisites
-
-- *RISC-V Toolchain*: Ensure you have the RISC-V GCC toolchain installed.
-- *Spike Simulator*: Make sure the `spike` RISC-V ISA simulator is installed.
-- *Proxy Kernel (pk)*: The `pk` (proxy kernel) should be available for running RISC-V binaries.
-
-## File Description
-
-- simplecounter.c: The source code for a simple RISC-V counter program.
-- simplecounter.o: The compiled object file (generated from simplecounter.c).
-- simplecounter: The final executable binary.
-
-## Building the Program
-
-1. *Compile and Link the Program*
-
-   To compile and link the source code into an executable, run the following command:
-
-   ```sh
-     riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o simplecounter simplecounter.c
-   ```
-
-   This command will generate the simplecounter executable.
-
-2. *Compile to Object File (if needed)*
-
-   If you need to generate the object file separately, you can do so with:
-
-   ```sh
-    riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -c simplecounter.c -o simplecounter.o
-   ```
-
-   Note: You need to link the object file to create an executable before running it with spike.
-
-## Running the Program
-
-To run the compiled simplecounter executable with the `spike` simulator and `pk`, use the following command:
-
-```sh
- spike pk simplecounter
+### Testing the SPIKE Simulator  
+The target is to run the ```findPrime.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
 ```
-
-### Debugging
-
-If you want to debug the program with `spike`, use the `-d ` flag for detailed debugging output:
-
-```sh
- spike -d pk simplecounter
+gcc findPrime.c  
+./a.out
 ```
-
-This will provide detailed information about each instruction executed by the simulator.
-
-## Example Output
-
-When running the program, you should see output similar to the following:
-
-
-```Simple Digital Counter
-  Counter: 0
-  Counter: 1
-  Counter: 2
-  Counter: 3
-  Counter: 4
-  Counter: 5
-  Counter: 6
-  Counter: 7
-  Counter: 8
-  Counter: 9
-  Counter: 10
-  Counter reached the end value of 10. Stopping.
+And to compile the code using **riscv compiler**, use the following command:  
 ```
+spike pk findPrime.o
+```  
+![Spike Simulation](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/1.png)
 
-## Troubleshooting
+#### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
+RISCV Objdump with -O1 option  
 
-- *Compilation Issues*: Ensure that the RISC-V toolchain is correctly installed and configured.
-- *Execution Issues*: Verify that spike and pk are properly installed and that the simplecounter executable is built correctly.
-- *Path Problems*: Make sure that spike and pk are in your system's PATH or provide full paths to these executables.
+![Objdump in -O1](https://github.com/chanduputta/vsdsquadronmini-Research-internship/blob/main/Task2/Objdump%20in%20-O1.png)
+
+RISCV Objdump with -Ofast option  
+
+![Objdump in -Ofast](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/3.png)
+
+### Debugging the Assembly Language Program of  ```findPrime.c```  
+* Open the **Objdump** of code by using the following command  
+```
+$ riscv64-unknown-elf-objdump -d findPrime.o | less  
+```
+* Open the debugger in another terminal by using the following command  
+```
+$ spike -d pk findPrime.o
+```
+* The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
+
+![Debugging](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/2.png) 
 
 </details>
+
+----------------------------------------
