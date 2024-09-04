@@ -131,14 +131,14 @@ Save the file in the editor
  
 
 ### Testing the SPIKE Simulator  
-The target is to run the ```findPrime.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
+The target is to run the ```sum1ton.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
 ```
-gcc findPrime.c  
+gcc sum1ton.c  
 ./a.out
 ```
 And to compile the code using **riscv compiler**, use the following command:  
 ```
-spike pk findPrime.o
+spike pk sum1ton.o
 ```  
 ![Spike Simulation](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/1.png)
 
@@ -151,14 +151,14 @@ RISCV Objdump with -Ofast option
 
 ![Objdump in -Ofast](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/3.png)
 
-### Debugging the Assembly Language Program of  ```findPrime.c```  
+### Debugging the Assembly Language Program of  ```sum1ton.c```  
 * Open the **Objdump** of code by using the following command  
 ```
-$ riscv64-unknown-elf-objdump -d findPrime.o | less  
+$ riscv64-unknown-elf-objdump -d sum1ton.o | less  
 ```
 * Open the debugger in another terminal by using the following command  
 ```
-$ spike -d pk findPrime.o
+$ spike -d pk sum1ton.o
 ```
 * The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
 
