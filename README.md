@@ -520,3 +520,105 @@ The RISC-V instruction set architecture (ISA) defines several types of instructi
 </details>
 
 -------------------------------------------------------------------------
+
+
+<details>
+<summary><h2>Task 4:</h2> 
+ <br>
+ <h2>
+ By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms  
+ </h2>
+  <br>
+  </summary>
+
+>***NOTE:** Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
+  
+### Steps to perform functional simulation of RISCV  
+
+## GTKWAVE Generation Process
+
+Follow the steps below to generate the waveform using Verilog code and GTKWAVE.
+
+### Step 1: Clone the Repository
+
+Clone the RISC-V Verilog repository using the `git clone` command.
+
+```bash
+git clone https://github.com/vinayrayapati/rv321
+```
+
+### Step 2: Navigate to the Cloned Directory
+Change the directory to the cloned repository.
+
+```bash
+cd rv321
+```
+
+### Step 3: Compile the Verilog Code and Testbench
+Run the following `iverilog` command to compile the Verilog code and testbench.
+
+```bash
+iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+```
+### Step 4: Simulate the Verilog Code
+After compiling, simulate the Verilog code by running the compiled file:
+```bash
+./iiitb_rv321
+```
+
+![Main](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/Main.png)
+
+### Step 5: Open the Waveform in GTKWAVE
+Once the simulation generates the .vcd (Value Change Dump) file, you can visualize the waveform in GTKWAVE.
+```bash
+gtkwave iiitb_rv321.vcd
+```
+
+It will open the new window of GTKWAVE 
+
+![1](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/gtkwave%201.png)
+
+Tap the `iiitb_rv32i_tb` in the `SST` section
+
+![2](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/gtkwave%202.png)
+
+Now, drag the command in the same way presented under `time` section.
+
+![4](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/gtkwave%204.png)
+
+Select the instructions from EX_MEM_IR[31:0] to present the instructions used in Task 3 and Analysing the Output Waveform of various instructions that we have covered in TASK-3.
+
+ ***Instruction ADD r1, r2, r3 :***
+ 
+![Instruction ADD r1, r2, r3 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/ADD%20r1%2Cr2%2Cr3.png)
+
+**Instruction SUB r3, r1, r2 :**
+
+![Instruction SUB r3, r1, r2 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/SUB%20r3%2C%20r1%2C%20r2.png)
+
+**Instruction AND r2, r1, r3 :**
+
+![Instruction AND r2, r1, r3 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/AND%20r2%2C%20r1%2C%20r3.png)
+
+**Instruction OR r8, r2, r5 :**
+
+![Instruction OR r8, r2, r5 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/OR%20r8%2C%20r2%2C%20r5.png)
+
+**Instruction XOR r8, r1, r4 :**
+
+![Instruction XOR r8, r1, r4 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/XOR%20r8%2C%20r1%2C%20r4.png)
+
+**Instruction SLL r15, r11, r2 :**
+
+![Instruction SLL r15, r11, r2 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/SLL%20r15%2C%20r11%2C%20r2.png)
+
+**Instruction SLT r10, r2, r4 :**
+![Instruction SLT r10, r2, r4 :](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%204/SLT%20r10%2C%20r2%2C%20r4.png)
+
+
+To conclude : The output waveform for the list of instructions are obtained in GTKWAVE.
+
+</details>
+
+
+-----------------------------------------------------------------------------------------------------
