@@ -164,6 +164,10 @@ $ spike -d pk sum1ton.o
 
 ![Debugging](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%202/2.png) 
 
+
+============================================================================================
+
+
 <details>
  <summary> 
   <h2>
