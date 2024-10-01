@@ -21,7 +21,7 @@ This project implements a **gas detection system** using the **VSDSquadron Mini 
    - **Positive (Anode)** to **PD6**
    - **Negative (Cathode)** to **GND**
 
-### Circuit Diagram:
+### Circuit Connection:
    ```
    MQ Gas Sensor       VSDSquadron Mini
       VCC  -------->  5V
