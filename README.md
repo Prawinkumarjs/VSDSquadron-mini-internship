@@ -807,7 +807,7 @@ For simplicity, this system uses the gas sensor output and a threshold value to 
 
 ### Project Video:
 
-![Gas Detection System Using VSDSquadron Mini RISC-V Development Board Video](https://drive.google.com/file/d/1HNqd76ONLBzgRXruZAOvVshFZfznvdmb/view?usp=sharing)
+[Gas Detection System Using VSDSquadron Mini RISC-V Development Board Video](https://drive.google.com/file/d/1HNqd76ONLBzgRXruZAOvVshFZfznvdmb/view?usp=sharing)
 
 
 
