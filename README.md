@@ -670,6 +670,10 @@ This project implements a **gas detection system** using the **VSDSquadron Mini 
       -    -------->  GND
    ```
 
+### Project Image:
+
+![VSDSquadron-mini-internship](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%206/Front%20view(working).jpg)
+
 ### Truth Table:
 
 For simplicity, this system uses the gas sensor output and a threshold value to determine when to trigger the LED:
@@ -681,6 +685,8 @@ For simplicity, this system uses the gas sensor output and a threshold value to 
 
 
 ### Pin Diagram for Gas Detection System Using VSDSquadron Mini RISC-V Development Board:
+
+
 ![Gas Detection System Using VSDSquadron Mini RISC-V Development Board](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%205/Gas%20Detection%20System%20Using%20VSDSquadron%20Mini%20RISC-V%20Development%20Board.png)
    
 
@@ -741,3 +747,81 @@ This project demonstrates the integration of an **MQ gas sensor** with the **VSD
 
  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<details>
+
+ <summary><h2>Task 6 : </h2>
+ <br>
+  <h2>
+   Demonstration of Project  
+  </h2>
+  </summary>
+
+
+### Gas Detection System Using VSDSquadron Mini RISC-V Development Board
+
+## Project Overview:
+This project implements a **gas detection system** using the **VSDSquadron Mini board**, a RISC-V based SoC development kit. The gas detection system will monitor the air for dangerous gases using a gas sensor. When gas levels exceed a set threshold, a **LED indicator** or **buzzer** is activated to alert the user. This project demonstrates reading analog data from a sensor and controlling GPIO pins using digital logic, which is simulated and built using Arduino IDE.
+
+### Hardware Connections:
+- **Gas Sensor:**
+- **VCC** to **5V** pin of VSDSquadron Mini
+- **GND** to **GND** pin of VSDSquadron Mini
+- **AO** (Analog Output) to **PC4** (analog input pin)
+        
+- **LED:**
+   - **Positive (Anode)** to **PD6**
+   - **Negative (Cathode)** to **GND**
+
+### Circuit Diagram:
+   ```
+   MQ Gas Sensor       VSDSquadron Mini
+      VCC  -------->  5V
+      GND  -------->  GND
+      AO   -------->  PC4 (Analog Input)
+
+   LED               VSDSquadron Mini
+      +    -------->  PD6 (GPIO Pin for alert)
+      -    -------->  GND
+   ```
+
+### Truth Table:
+
+For simplicity, this system uses the gas sensor output and a threshold value to determine when to trigger the LED:
+
+   | Gas Sensor Value | LED Status (Alert) |
+   |------------------|--------------------|
+   | Below Threshold   | Off                |
+   | Above Threshold   | On                 |
+
+
+### Pin Diagram for Gas Detection System Using VSDSquadron Mini RISC-V Development Board:
+![Gas Detection System Using VSDSquadron Mini RISC-V Development Board](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%205/Gas%20Detection%20System%20Using%20VSDSquadron%20Mini%20RISC-V%20Development%20Board.png)
+
+
+
+### Project Image:
+![VSDSquadron-mini-internship](https://github.com/Prawinkumarjs/VSDSquadron-mini-internship/blob/main/Task%206/Front%20view(working).jpg)
+
+
+### Project Video:
+
+![Gas Detection System Using VSDSquadron Mini RISC-V Development Board Video](https://drive.google.com/file/d/1HNqd76ONLBzgRXruZAOvVshFZfznvdmb/view?usp=sharing)
+
+
+
+</details>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<details>
+
+*<summary><h3>Acknowledgment</h3></summary>*
+
+>
+>I would like to express my special thanking to my mentor *Kunal Ghosh*, and sincere gratitude to *Vlsi System Design* for providing me with the opportunity to intern remotely with their team. This internship has been an invaluable experience, allowing me to delve deep into embedded systems, RISC-V architecture, and VLSI design under the guidance of dedicated mentors.
+>
+>I am thankful for the support and knowledge imparted to me during this journey. It has significantly enhanced my technical skills and prepared me for future challenges in the field of digital design. I look forward to applying the lessons learned here in my continued pursuit of excellence in engineering.
+>
+</details>
+
