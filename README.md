@@ -1,4 +1,4 @@
-#  VSDSquadron Reseacrh Internship 2024
+#  VSDSquadron Research Internship 2024
 
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
@@ -530,7 +530,7 @@ The RISC-V instruction set architecture (ISA) defines several types of instructi
 <summary><h2>Task 4:</h2> 
  <br>
  <h2>
- By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms  
+ By making use of RISC-V Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms  
  </h2>
   <br>
   </summary>
